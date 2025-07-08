@@ -1,3 +1,25 @@
+@media (max-width: 480px) {
+  .card {
+    padding: 20px 15px;
+    width: 95%;
+  }
+
+  .link-list {
+    max-width: 100%;
+  }
+
+  .social-icons a {
+    width: 24px;
+    height: 24px;
+  }
+
+  .social-icons img {
+    width: 13px;
+    height: 13px;
+    margin: 6px auto;
+  }
+}
+
 /* Base Styling */
 body {
   margin: 0;
@@ -6,22 +28,24 @@ body {
   background-color: #FAFAFA;
   color: #000;
   display: flex;
-  justify-content: center;
-  /* Remove align-items center */
-  /* Remove height: 100vh */
-  min-height: 100vh; /* optional to keep minimum viewport height */
-  flex-direction: column; /* optional to stack content vertically */
+  justify-content: center; /* center horizontally */
+  /* allow vertical scroll if content too tall */
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 /* Card */
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #FAFAFA;
   padding: 40px 30px;
   border-radius: 12px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
-  text-align: center;
   width: 90%;
   max-width: 400px;
+  margin: 20px auto; /* margin auto to center horizontally */
 }
 
 /* Avatar */
@@ -73,6 +97,15 @@ h1 {
   font-weight: 600;
 }
 
+h3 {
+  margin-top: 30px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
 .bio {
   font-size: 0.9em;
   color: #333;
@@ -85,9 +118,10 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 0;
-  margin: 0 auto;
+  width: 100%;
   max-width: 300px;
+  padding: 0;
+  margin: 0 auto 20px auto;
 }
 
 /* Buttons */
