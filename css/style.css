@@ -42,25 +42,26 @@ body {
 
 .social-icons a {
   display: inline-block;
-  width: 36px;
-  height: 36px;
+  width: 30px;       /* smaller than before (36px) */
+  height: 30px;      /* smaller than before */
   border-radius: 50%;
   overflow: hidden;
-  border: 1.5px solid #000;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  /* border removed */
+  transition: transform 0.2s ease;
 }
 
 .social-icons a:hover {
-  background-color: #eaeaea;
-  transform: scale(1.1);
+  /* no background color change */
+  transform: scale(1.1); /* subtle scale */
 }
 
 .social-icons img {
-  width: 20px;
-  height: 20px;
+  width: 16px;      /* smaller than before (20px) */
+  height: 16px;
   display: block;
-  margin: 8px auto;
+  margin: 7px auto; /* adjusted margin to center smaller icon */
 }
+
 
 
 /* Name & Bio */
