@@ -45,14 +45,14 @@ h1 {
   font-weight: 400;
 }
 
-/* Link List */
-.link-list {
+/* Links List */
+.links-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.link-list a {
+.links-list a {
   display: block;
   text-decoration: none;
   color: #000;
