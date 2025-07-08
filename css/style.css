@@ -7,8 +7,10 @@ body {
   color: #000;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  /* Remove align-items center */
+  /* Remove height: 100vh */
+  min-height: 100vh; /* optional to keep minimum viewport height */
+  flex-direction: column; /* optional to stack content vertically */
 }
 
 /* Card */
