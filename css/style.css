@@ -1,4 +1,4 @@
-/* Base Styling */
+/* Font & Base Styling */
 body {
   margin: 0;
   padding: 0;
@@ -46,7 +46,7 @@ h1 {
   font-weight: 400;
 }
 
-/* Link Buttons */
+/* Link List Styling */
 .link-list {
   display: flex;
   flex-direction: column;
