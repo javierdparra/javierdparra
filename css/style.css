@@ -59,6 +59,7 @@ body {
   margin-bottom: 20px;
 }
 
+
 .social-icons {
   margin: 15px 0 30px 0;
   display: flex;
@@ -66,26 +67,25 @@ body {
   gap: 15px;
 }
 
+/* Responsive Social Icons */
 .social-icons a {
   display: inline-block;
-  width: 30px;       /* smaller than before (36px) */
-  height: 30px;      /* smaller than before */
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   overflow: hidden;
-  /* border removed */
   transition: transform 0.2s ease;
 }
 
 .social-icons a:hover {
-  /* no background color change */
-  transform: scale(1.1); /* subtle scale */
+  transform: scale(1.1);
 }
 
 .social-icons img {
-  width: 16px;      /* smaller than before (20px) */
+  width: 16px;
   height: 16px;
   display: block;
-  margin: 7px auto; /* adjusted margin to center smaller icon */
+  margin: 7px auto;
 }
 
 
