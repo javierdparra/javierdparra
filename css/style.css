@@ -11,6 +11,34 @@
   }
 }
 
+  /* Responsive layout for two columns */
+@media (max-width: 768px) {
+  .two-columns {
+    flex-direction: column;
+  }
+
+  .two-columns .column {
+    width: 100%;
+  }
+}
+
+  /* Responsive for three-columns */
+@media (max-width: 900px) {
+  .three-columns .column {
+    flex: 1 1 45%; /* Show 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .three-columns {
+    flex-direction: column;
+  }
+
+  .three-columns .column {
+    width: 100%;
+  }
+}
+
   .link-list {
     max-width: 100%;
   }
@@ -27,6 +55,12 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* Base Styling */
 body {
   margin: 0;
@@ -39,6 +73,50 @@ body {
   /* allow vertical scroll if content too tall */
   min-height: 100vh;
   flex-direction: column;
+}
+
+/* General block style */
+.block {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Full-width block */
+.full-width {
+  width: 100%;
+}
+
+/* Two-column block */
+.two-columns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.two-columns .column {
+  flex: 1 1 45%;
+  min-width: 280px;
+  background: #f1f1f1;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+/* Three-column block */
+.three-columns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.three-columns .column {
+  flex: 1 1 30%;
+  min-width: 250px;
+  background: #f1f1f1;
+  padding: 15px;
+  border-radius: 6px;
 }
 
 /* Card */
