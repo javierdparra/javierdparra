@@ -204,7 +204,7 @@ html, body {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .social-icons img {
