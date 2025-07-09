@@ -10,15 +10,22 @@
 <body>
 
   <header class="navbar">
-    <div class="logo">Javier D. Parra</div>
-    <nav class="nav-links">
-      <a href="#">Music</a>
-      <a href="#">Videos</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-    <div class="menu-toggle" id="menuToggle">&#9776;</div>
-  </header>
+  <div class="logo">Javier D. Parra</div>
+  <div class="menu-toggle" id="menuToggle">&#9776;</div>
+
+  <!-- Slide-in Navigation Panel -->
+  <div class="nav-overlay" id="navOverlay">
+    <div class="nav-panel">
+      <div class="close-btn" id="closeBtn">&times;</div>
+      <nav class="nav-links">
+        <a href="#">Music</a>
+        <a href="#">Videos</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
 
   <main class="container">
     <section class="block full-width">
@@ -67,13 +74,27 @@
     </section>
   </main>
 
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.querySelector('.nav-links');
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  </script>
+ <script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navOverlay = document.getElementById('navOverlay');
+  const closeBtn = document.getElementById('closeBtn');
+
+  menuToggle.addEventListener('click', () => {
+    navOverlay.classList.add('active');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    navOverlay.classList.remove('active');
+  });
+
+  // Optional: click outside the panel to close
+  navOverlay.addEventListener('click', (e) => {
+    if (e.target === navOverlay) {
+      navOverlay.classList.remove('active');
+    }
+  });
+</script>
+
 
 </body>
 </html>
