@@ -1,0 +1,179 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+  background-color: #FAFAFA;
+  color: #000;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  height: 60px;
+  background-color: transparent;
+  position: relative;
+  z-index: 1000;
+}
+.logo {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: #555;
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Overlay and sliding panel */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  z-index: 9999;
+}
+.nav-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 75%;
+  max-width: 300px;
+  background: #fafafa;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 10000;
+}
+.nav-overlay.active {
+  display: block;
+}
+.nav-overlay.active .nav-panel {
+  transform: translateX(0%);
+}
+.close-btn {
+  align-self: flex-end;
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  user-select: none;
+}
+.nav-panel .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.nav-panel .nav-links a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+.nav-panel .nav-links a:hover {
+  color: #555;
+}
+
+/* Responsive: show hamburger, hide desktop nav */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Blocks & layout */
+.block {
+  max-width: 900px;     /* max width for block content */
+  margin: 20px auto;    /* vertical margin + auto horizontal centers block */
+  padding: 0 20px;      /* consistent left-right padding */
+  background: transparent;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.two-columns,
+.three-columns {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.two-columns .column {
+  flex: 1 1 45%;
+  min-width: 280px;
+  padding: 15px;
+  border-radius: 6px;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.three-columns .column {
+  flex: 1 1 30%;
+  min-width: 250px;
+  padding: 15px;
+  border-radius: 6px;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #999;
+  padding: 20px 10px;
+  margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .two-columns {
+    flex-direction: column;
+  }
+  .two-columns .column,
+  .three-columns .column {
+    width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .three-columns .column {
+    flex: 1 1 45%;
+  }
+}
