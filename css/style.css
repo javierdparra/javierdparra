@@ -64,7 +64,7 @@
 /* Base Styling */
 body {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   font-family: 'PT Sans', sans-serif;
   background-color: #FAFAFA;
   color: #000;
@@ -77,8 +77,9 @@ body {
 
 /* General block style */
 .block {
-  margin-bottom: 20px;
-  padding: 20px;
+  margin: 20px auto;            /* centers horizontally */
+  max-width: 900px;             /* limits width on large screens */
+  width: 100%;                  /* takes full width up to max */
   background: transparent; /* was white */
   border-radius: 8px;
   box-shadow: none; /* was 0 0 10px rgba(0,0,0,0.05) */
