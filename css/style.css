@@ -182,6 +182,12 @@ html, body {
   margin: 20px auto;
 }
 
+.avatar {
+  width: 60px;
+  height: 50px;
+  border-radius: 50%;
+}
+
 .bio {
   font-style: italic;
   margin-top: 10px;
@@ -197,8 +203,8 @@ html, body {
 }
 
 .social-icons img {
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
   transition: transform 0.3s;
 }
 
