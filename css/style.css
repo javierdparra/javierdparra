@@ -182,19 +182,24 @@ html, body {
   margin: 20px auto;
 }
 
+/* Avatar: clean circle, better sizing */
 .avatar {
-  width: 60px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
+  object-fit: cover;
+  border: none;
 }
 
+/* Bio spacing */
 .bio {
-  font-style: italic;
-  margin-top: 10px;
+  font-style: normal;
+  margin: 20px 0;
   text-align: center;
   color: #333;
 }
 
+/* Social Icons */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -203,37 +208,59 @@ html, body {
 }
 
 .social-icons img {
-  width: 15px;
-  height: 15px;
-  transition: transform 0.3s;
+  width: 13.5px; /* 10% smaller than previous 15px */
+  height: 13.5px;
+  filter: grayscale(100%) brightness(0); /* black monochrome */
+  transition: transform 0.3s ease;
 }
 
 .social-icons img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
+/* Link buttons */
 .link-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  width: 100%;
 }
 
 .link-list a {
+  display: block;
+  padding: 12px 0;
+  text-align: center;
   text-decoration: none;
-  color: #0077cc;
-  font-weight: 600;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .link-list a:hover {
-  text-decoration: underline;
+  background-color: #eaeaea;
+  transform: scale(1.02);
 }
 
+/* Videos adapt inside card */
 .video-container {
+  width: 100%;
   margin-bottom: 20px;
-  max-width: 100%;
-  overflow: hidden;
   border-radius: 8px;
+  overflow: hidden;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
+.video-container iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: none;
+}
+
 
