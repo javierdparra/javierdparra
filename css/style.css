@@ -232,7 +232,7 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 30px;
+  margin-bottom: none;
   width: 100%;
 }
 
@@ -242,7 +242,7 @@ html, body {
   text-align: center;
   text-decoration: none;
   color: #000;
-  border: 1px solid #ccc;
+  border: 2px solid #000;
   border-radius: 6px;
   font-weight: 500;
   transition: all 0.3s ease;
