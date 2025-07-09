@@ -1,0 +1,143 @@
+/* Only applies to Links Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FAFAFA;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: none;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto 40px auto;
+}
+
+/* Avatar: clean circle, better sizing */
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: none;
+}
+
+.card-header {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.avatar-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+  padding: 10px;
+}
+
+.overlay-content h1 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.overlay-content .social-icons {
+  gap: 12px;
+  margin: 0;
+}
+
+.overlay-content .social-icon {
+  filter: brightness(100%);
+}
+
+/* Bio spacing */
+.bio {
+  font-style: normal;
+  margin: 20px 0;
+  text-align: center;
+  color: #333;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.social-icons img {
+  width: 13.5px; /* 10% smaller than previous 15px */
+  height: 13.5px;
+  filter: grayscale(100%) brightness(0); /* black monochrome */
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Link buttons */
+.link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: none;
+  width: 100%;
+}
+
+.link-list a {
+  display: block;
+  padding: 12px 0;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.link-list a:hover {
+  background-color: #eaeaea;
+  transform: scale(1.02);
+}
+
+.card h3 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* Videos adapt inside card */
+.video-container {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.video-container iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: none;
+}
