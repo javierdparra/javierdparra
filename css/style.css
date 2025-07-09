@@ -242,7 +242,7 @@ html, body {
   text-align: center;
   text-decoration: none;
   color: #000;
-  border: 2px solid #000;
+  border: 1px solid #000;
   border-radius: 6px;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -257,6 +257,7 @@ html, body {
 
 .card h3 {
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 /* Videos adapt inside card */
