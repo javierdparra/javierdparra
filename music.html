@@ -4,16 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Javier D. Parra Sitio Oficial | Música</title>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
 
   <header class="navbar">
-  <div class="logo">Javier D. Parra</div>
-  <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    <div class="logo">Javier D. Parra</div>
 
-  <!-- Slide-in Navigation Panel -->
+    <!-- Desktop nav links -->
+    <nav class="nav-links">
+      <a href="#">Music</a>
+      <a href="#">Videos</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <!-- Hamburger toggle -->
+    <div class="menu-toggle" id="menuToggle">&#9776;</div>
+  </header>
+
+  <!-- Slide-in overlay menu for mobile -->
   <div class="nav-overlay" id="navOverlay">
     <div class="nav-panel">
       <div class="close-btn" id="closeBtn">&times;</div>
@@ -25,56 +36,54 @@
       </nav>
     </div>
   </div>
-</header>
 
-  <main class="container">
-    <section class="block full-width">
-      <h2>Full Width Block</h2>
-      <p>This block takes the full width of the container.</p>
-    </section>
+  <!-- Content blocks -->
+  <section class="block full-width">
+    <h2>Full Width Block</h2>
+    <p>This block takes the full width of the container.</p>
+  </section>
 
-    <section class="block two-columns">
-      <div class="column">
-        <h3>Column 1</h3>
-        <p>Content for the first column.</p>
-      </div>
-      <div class="column">
-        <h3>Column 2</h3>
-        <p>Content for the second column.</p>
-      </div>
-    </section>
+  <section class="block two-columns">
+    <div class="column">
+      <h3>Column 1</h3>
+      <p>Content for the first column.</p>
+    </div>
+    <div class="column">
+      <h3>Column 2</h3>
+      <p>Content for the second column.</p>
+    </div>
+  </section>
 
-    <section class="block full-width">
-      <h2>Another Full Width Block</h2>
-      <p>More content spanning the entire width.</p>
-    </section>
+  <section class="block full-width">
+    <h2>Another Full Width Block</h2>
+    <p>More content spanning the entire width.</p>
+  </section>
 
-    <section class="block two-columns">
-      <div class="column">
-        <p>Left 50%</p>
-      </div>
-      <div class="column">
-        <p>Right 50%</p>
-      </div>
-    </section>
+  <section class="block two-columns">
+    <div class="column">
+      <p>Left 50%</p>
+    </div>
+    <div class="column">
+      <p>Right 50%</p>
+    </div>
+  </section>
 
-    <section class="block three-columns">
-      <div class="column">
-        <h4>Column 1</h4>
-        <p>Content for column one.</p>
-      </div>
-      <div class="column">
-        <h4>Column 2</h4>
-        <p>Content for column two.</p>
-      </div>
-      <div class="column">
-        <h4>Column 3</h4>
-        <p>Content for column three.</p>
-      </div>
-    </section>
-  </main>
+  <section class="block three-columns">
+    <div class="column">
+      <h4>Column 1</h4>
+      <p>Content for column one.</p>
+    </div>
+    <div class="column">
+      <h4>Column 2</h4>
+      <p>Content for column two.</p>
+    </div>
+    <div class="column">
+      <h4>Column 3</h4>
+      <p>Content for column three.</p>
+    </div>
+  </section>
 
- <script>
+<script>
   const menuToggle = document.getElementById('menuToggle');
   const navOverlay = document.getElementById('navOverlay');
   const closeBtn = document.getElementById('closeBtn');
@@ -87,14 +96,12 @@
     navOverlay.classList.remove('active');
   });
 
-  // Optional: click outside the panel to close
   navOverlay.addEventListener('click', (e) => {
     if (e.target === navOverlay) {
       navOverlay.classList.remove('active');
     }
   });
 </script>
-
 
 </body>
 </html>
