@@ -4,6 +4,13 @@
     width: 95%;
   }
 
+  @media (max-width: 768px) {
+  .card {
+    width: 95%;
+    padding: 30px 20px;
+  }
+}
+
   .link-list {
     max-width: 100%;
   }
@@ -42,7 +49,7 @@ body {
   background-color: #FAFAFA;
   padding: 40px 30px;
   border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  box-shadow: none; /* Instead of 0 0 12px rgba(0, 0, 0, 0.05);*/
   width: 90%;
   max-width: 400px;
   margin: 20px auto; /* margin auto to center horizontally */
@@ -141,6 +148,7 @@ h3 {
 .link-list a:hover {
   background-color: #eaeaea;
   cursor: pointer;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 /* Responsive YouTube iframe container */
