@@ -115,41 +115,43 @@ html, body {
 
 /* Blocks & layout */
 .block {
-  margin: 20px 0;
+  max-width: 900px;     /* max width for block content */
+  margin: 20px auto;    /* vertical margin + auto horizontal centers block */
+  padding: 0 20px;      /* consistent left-right padding */
   background: transparent;
   border-radius: 8px;
-  max-width: 900px;
-  padding: 0 20px;
-  margin-left: auto;
-  margin-right: auto;
+  box-sizing: border-box;
 }
-.full-width {
-  width: 100%;
-}
+
 .two-columns,
 .three-columns {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 20px;
+  box-sizing: border-box;
 }
+
 .two-columns .column {
   flex: 1 1 45%;
   min-width: 280px;
   padding: 15px;
   border-radius: 6px;
   background: transparent;
+  box-sizing: border-box;
 }
+
 .three-columns .column {
   flex: 1 1 30%;
   min-width: 250px;
   padding: 15px;
   border-radius: 6px;
   background: transparent;
+  box-sizing: border-box;
 }
+
 @media (max-width: 768px) {
   .two-columns {
     flex-direction: column;
