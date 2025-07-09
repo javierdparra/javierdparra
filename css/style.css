@@ -246,6 +246,10 @@ html, body {
   transform: scale(1.02);
 }
 
+.card h3 {
+  margin-bottom: 20px;
+}
+
 /* Videos adapt inside card */
 .video-container {
   width: 100%;
